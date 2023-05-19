@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+button {
+    font-size: 17px;
+    background: transparent;
+    color: #fff;
+    width: 200px;
+    border: 2px solid white;
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.top {
+    background: linear-gradient(rgba(4, 9, 30, 0.445), rgba(4, 9, 30, 0.171)), url(img/spacex_bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+header .logo {
+    height: 130px;
+    cursor: pointer;
+}
+header .logo img {
+    height: 100%;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+header ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    color: #fff;
+    background-color: #fff;
+    display: block;
+    height: 1px;
+    transition: width .2s linear;
+    right: 0;
+}
+header ul li:hover::after {
+    width: 100%;
+    right: initial;
+    left: 0;
+}
+header .nav-right a{
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+} 
+header .nav-right a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    color: #fff;
+    background-color: #fff;
+    display: block;
+    height: 1px;
+    transition: width .2s linear;
+}
+header .nav-right a:hover::after {
+    width: 100%;
+    right: initial;
+    left: 0;
+}
+header .bar {
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    /* position: relative; */
+}
+.close {
+    height: 5px;
+    width: 15px;
+    color: #eb0e0e;
+    background-color: #e91414;
+    display: flex;
+    flex-direction: row;
+}
+
+/* ///////// SideBar \\\\\\\\\\\\\ */
+.sidebar {
+    background-color: #000;
+    height: 90%;
+    position: absolute;
+    right: -30%;
+    width: 25vw;
+    text-align: right;
+    padding: 30px;
+    border-radius: 2%;
+    transition: .5s;
+    display: none;
+  }
+.sidebar .mobile {
+    display: none;
+}
+  .sidebar p {
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom: 1px solid #80808052;
+    color: #fff;
+    transition: .3s;
+  }
+
+  .sidebar p:hover {
+    color: #ffffff73;
+  }
+
+  @media only screen and (max-width: 900px) {
+    header {
+        justify-content: space-evenly;
+    }
+    header .logo {
+        margin-left: 50px;
+    }
+    header ul li { 
+        display: none;
+    }
+    header .nav-right a {
+        display: none;
+    }
+    .sidebar .mobile {
+        display: block;
+    }
+    button {
+        width: 100px;
+    }
+    .body > h1 {
+        font-size: 15px;
+    }
+    .body > p {
+        font-size: 10px;
+    }
+
+    .second .content-1 p {
+        font-size: 10px;
+    }
+    .second .content-1 h1 {
+        font-size: 15px;
+    }
+
+    .third .content-2 p {
+        font-size: 10px;
+    }
+    .third .content-2 h1 {
+        font-size: 15px;
+    }
+
+    .fourth .content-3 p {
+        font-size: 10px;
+    }
+    .fourth .content-3 h1 {
+        font-size: 15px;
+    }
+}
+
+/* /////// Landing Page Content \\\\\\\\ */
+.body {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 360px;
+    /* display: inline-block; */
+}
+.body p {
+    /* display: inline-block; */
+    font-size: 25px;
+}
+.body h1 {
+    font-family: monospace;
+    font-size: 40px;
+    font-weight: bolder;
+    /* display: inline-block; */
+    margin: 0;
+}
+
+/* ///////// Section 2 ////////////// */
+
+.second {
+    background: linear-gradient(rgba(4, 9, 30, 0.445), rgba(4, 9, 30, 0.171)), url(img/spacex_bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.second .content-1 {
+    position: absolute;
+    bottom: -90%;
+    left: 5%;
+}
+.second .content-1 p {
+    font-size: 30px;
+}
+.second .content-1 h1 {
+    font-family: monospace;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+/* ///////// Section 3 ////////////// */
+
+.third {
+    background: linear-gradient(rgba(4, 9, 30, 0.445), rgba(4, 9, 30, 0.171)), url(img/spacex_bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.third .content-2 {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+.third .content-2 h1 {
+    font-family: monospace;
+    font-size: 45px;
+    font-weight: bolder;
+}
+/* ///////// Section 4 ////////////// */
+
+.fourth {
+    background: linear-gradient(rgba(4, 9, 30, 0.445), rgba(4, 9, 30, 0.171)), url(img/spacex_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.fourth .content-3 {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+.fourth .content-3 h1 {
+    font-family: monospace;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+
+
+/* ////////////// Footer \\\\\\\\\\\\ */
+
+footer {
+    background-color: black;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    font-weight: 200;
+    display: inline-block;
+    font-family: serif;
+    color: gray;
+}
+footer h5 {
+    display: inline-block;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ////////// Button hover effect \\\\\\\\\\\\\\\ */
+button:hover {
+    color: #000;
+  }
+button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  button[class^="slide"]::after {
+    transition: all 0.2s linear;
+  }
+  button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.2s linear;
+  }
+  button.slide_from_top::after {
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+  }

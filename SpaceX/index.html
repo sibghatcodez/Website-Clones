@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/38e2ab382e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="hamburger" type="button">
+    <section class="top">
+        <header>
+
+                <div class="logo">
+                    <img src="img/spacex_logo.png" alt="">
+            </div>
+
+            <ul class="nav-links">
+                <li>Falcon 9</li>
+                <li>Falcon Heavy</li>
+                <li>Dragon</li>
+                <li>Starship</li>
+                <li>Human Spaceflight</li>
+                <li>Rideshare</li>
+                <li>Starshield</li>
+                <li>Starlink</li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="#">SHOP</a>
+            </div>
+            
+            <div class="bar">
+                <i class="fa-solid fa-bars menu" onclick="sideBar()"></i>
+            </div>
+            <!-- <span class="close"></span> -->
+            <!-- <span class="close"></span> -->
+            <!-- <span class="close"></span> -->
+        </header>
+        <div class="sidebar">
+            <div class="mobile">
+                <p>Falcon 9</p>
+                <p>Falcon Heavy</p>
+                <p>Dragon</p>
+                <p>Starship</p>
+                <p>Human Spaceflight</p>
+                <p>Rideshare</p>
+                <p>Starshield</p>
+                <p>Starlink</p>
+            </div>
+            <p>MISSION</p>
+            <p>LAUNCHES</p>
+            <p>CAREERS</p>
+            <p>UPDATES</p>
+            <p>SHOP</p>
+        </div>
+
+        <div class="body">
+            <p>UPCOMING LAUNCH</p>
+            <h1>SPACE DEVELOPMENT<br>AGENCY’S TRANCH<br>MISSION</h1>
+            <br>
+            <button class="slide_from_top">WATCH</button>
+        </div>
+    </section>
+
+
+    <section class="second">
+        <div class="content-1">
+            <p>RECENT LAUNCH</p>
+            <h1>STARLINK MISSION</h1>
+            <br>
+            <button class="slide_from_top">REWATCH</button>
+        </div>
+    </section>
+
+
+    <section class="third">
+        <div class="content-2">
+            <h1>STARSHIP UPDATE</h1>
+            <br>
+            <button class="slide_from_top">LEARN MORE</button>
+        </div>
+    </section>
+
+
+    <section class="fourth">
+        <div class="content-3">
+            <h1>STARSHIP SELECTED <br> BY NASA TO SUPPORT <br> SUSTAINED LUNAR <br> EXPLORATION</h1>
+            <br>
+            <button class="slide_from_top">LEARN MORE</button>
+        </div>
+    </section>
+
+    <footer>
+       <p>SPACEX © 2022</p>
+         <h5>TWITTER    YOUTUBE    INSTAGRAM    FLICKR    LINKEDIN    PRIVACY    POLICY    SUPPLIERS</h5>
+    </footer>
+
+
+    <!-- /////////// JavaScript \\\\\\\\\\\\ -->
+    <script>
+        const menu = document.querySelector('.menu');
+        const sidebar = document.querySelector('.sidebar');
+        const header = document.getElementsByTagName('header');
+  
+        function sideBar() {
+    if (sidebar.style.right === '-30%') {
+      sidebar.style.display = 'block';
+      setTimeout(() => sidebar.style.right = '0', 10);
+    } else {
+      sidebar.style.right = '-30%';
+      setTimeout(() => sidebar.style.display = 'none', 300);
+    }
+  }
+
+    </script>
+</body>
+
+</html>
