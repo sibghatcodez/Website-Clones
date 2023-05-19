@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <script src="https://kit.fontawesome.com/38e2ab382e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <i class="fa-solid fa-xmark"></i> -->
+    
+        <div class="header">
+        <div class="logo">
+            <i class="fa-solid fa-bars"></i>
+            <img src="img/youtube.png" alt="">
+            <h1>YouTube<sup style="font-size: 14px;">PK</sup></h1>
+        </div>
+            <div class="search-box">
+                <input type="search" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass glass"></i>
+            </div>
+            <i class="fa-solid fa-microphone microphone"></i>
+            <div class="account">
+                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-bell"></i>
+                <img src="img/pfp.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="suggestions">
+            <button class="active-btn" onclick="activeBtn()">All</button>
+            <button onclick="activeBtn()">CSS</button>
+            <button onclick="activeBtn()">Computers</button>
+            <button onclick="activeBtn()">Gaming</button>
+            <button onclick="activeBtn()">All</button>
+            <button onclick="activeBtn()">Live</button>
+            <button onclick="activeBtn()">Visual Arts</button>
+            <button onclick="activeBtn()">Recently Uploaded</button>
+            <button onclick="activeBtn()">New to you</button>
+            <button onclick="activeBtn()">Motovlogs</button>
+            <button onclick="activeBtn()">Software Enginering</button>
+            <!-- <button>Street Food</button> -->
+        </div>
+        
+        <div class="sidebar">
+            <div class="home">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </div>
+            <div class="shorts">
+                <i class="fa-solid fa-circle-play"></i>
+                <p>Shorts</p>
+            </div>
+            <div class="subs">
+                <i class="fa-solid fa-box-open"></i>
+                <p>Subscriptions</p>
+            </div>
+            <div class="library">
+                <i class="fa-solid fa-chart-simple"></i>
+                <p>Library</p>
+            </div>
+    </div>
+
+
+    <div class="videos">
+        <div class="channel">
+            <img src="img/thumbnail_1.jpg" alt="" id="thumbnail"><!--//thumbnail -->
+
+            <div class="channel_content">
+                <img src="img/pfp-1.jpeg" alt="" id="channel_img"><!--//channel_img -->
+                <h3 id="video_title">How to build a responsive website!</h3> <!-- video_title -->
+                <p id="channel_name">Tany Martin</p><!-- channel_name -->
+                <p id="video_views">102k views</p><!-- video_views -->
+                <p id="video_uploaded">2years ago</p><!-- video_uploaded -->
+            </div>
+
+        </div>
+        <div class="channel">
+            <img src="img/thumbnail_2.jpg" alt="" id="thumbnail"><!--//thumbnail -->
+            
+            <div class="channel_content">
+                <img src="img/pfp-2.png" alt="" id="channel_img"><!--//channel_img -->
+            <h2 id="video_title">How to make an android app with Fluter</h2> <!-- video_title -->
+            <p id="channel_name">Muneer Niazi</p><!-- channel_name -->
+            <p id="video_views">1.3M views</p><!-- video_views -->
+            <p id="video_uploaded">3 weeks ago</p><!-- video_uploaded -->
+            </div>
+        </div>
+        <div class="channel">
+            <img src="img/thumbnail_3.jpg" alt="" id="thumbnail"><!--//thumbnail -->
+            <div class="channel_content">
+            <img src="img/pfp-3.jpg" alt="" id="channel_img"><!--//channel_img -->
+            <h2 id="video_title">10 Habits Of Billionaires. Success awaits you.</h2> <!-- video_title -->
+            <p id="channel_name">MOTIVATION GYAAN</p><!-- channel_name -->
+            <p id="video_views">1.3k views</p><!-- video_views -->
+            <p id="video_uploaded">19 minutes ago</p><!-- video_uploaded -->
+            </div>
+        </div>
+        <div class="channel">
+            <img src="img/thumbnail_4.jpg" alt="" id="thumbnail"><!--//thumbnail -->
+            
+            <div class="channel_content">
+            <img src="img/pfp-4.jpg" alt="" id="channel_img"><!--//channel_img -->
+            <h2 id="video_title">Most popular books of the year 2017</h2> <!-- video_title -->
+            <p id="channel_name">BooksNewz</p><!-- channel_name -->
+            <p id="video_views">100 views</p><!-- video_views -->
+            <p id="video_uploaded">5 years ago.</p><!-- video_uploaded -->
+            </div>
+        </div>
+        <div class="channel">
+            <img src="img/thumbnail_5.jpg" alt="" id="thumbnail"><!--//thumbnail -->
+
+            <div class="channel_content">
+            <img src="img/pfp-5.png" alt="" id="channel_img"><!--//channel_img -->
+            <h2 id="video_title">Pakistan's National Anthem | Coke Studio</h2> <!-- video_title -->
+            <p id="channel_name">Coke Studio</p><!-- channel_name -->
+            <p id="video_views">10M views</p><!-- video_views -->
+            <p id="video_uploaded">1 year ago</p><!-- video_uploaded -->
+            </div>
+        </div>
+        <div class="channel">
+            <img src="img/thumbnail_6.jpg" alt="" id="thumbnail"><!--//thumbnail -->
+
+            <div class="channel_content">
+            <img src="img/pfp.jpg" alt="" id="channel_img"><!--//channel_img -->
+            <h2 id="video_title">how to grow juicy watermelon || villagedailylife</h2> <!-- video_title -->
+            <p id="channel_name">villagelife</p><!-- channel_name -->
+            <p id="video_views">2.5k views</p><!-- video_views -->
+            <p id="video_uploaded">2months ago</p><!-- video_uploaded -->
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+function activeBtn() {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('active-btn'));
+      button.classList.add('active-btn');
+    });
+  });
+}
+
+
+    </script>
+</body>
+</html>

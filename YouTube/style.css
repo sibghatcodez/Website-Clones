@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/* font-family: 'Oswald', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+/* font-family: 'Lato', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+:root {
+    --white: #fff;
+    --black: #000000ef;
+}
+body {
+    background-color: var(--black);
+}
+
+
+/* ------------- Header CSS ------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 20px;
+    text-align: center;
+}
+.header i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.header .microphone {
+    background-color: #000000dc;
+    border-radius: 100px;
+    padding: 12px;
+}
+.header .microphone:hover {background-color: #c4c4c442;}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo img {
+    width: 2rem;
+    cursor: pointer;
+    margin-right: 3px;
+}
+.header .logo h1 {
+font-size: 1.5rem;
+display: inline-flex;
+font-family: 'Oswald', sans-serif;
+font-weight: 200;
+cursor: pointer;
+}
+
+.header .search-box input {
+    width: 36rem;
+    height: 2.5rem;
+    padding: 15px;
+    /* border-radius: 25px; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #80808048;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+}
+.header .search-box input::placeholder {
+    font-size: 1.1rem;
+}
+.header .search-box .glass {
+    background-color: #80808048;
+    height: 2.5rem;
+    width: 5rem;
+    display: inline-block;
+    position: absolute;
+    padding-top: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.header .search-box i {
+    font-size: 25px;
+}
+.header .account {
+    display: flex;
+    align-items: center;
+}
+.header .account img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+    .header .search-box input {
+      width: 33rem;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .sidebar {
+      width: 15%;
+      padding-top: 5%;
+      height: auto;
+      position: static;
+    }
+    
+    .videos {
+      margin-left: 1rem;
+    }
+    
+    .channel {
+      width: 22rem;
+      height: 20rem;
+    }
+    
+    .channel #thumbnail {
+      height: 13rem;
+      width: 20rem;
+    }
+    
+    .channel .channel_content h2 {
+      font-size: 13px;
+    }
+    
+    .channel .channel_content #video_views,
+    .channel .channel_content #video_uploaded {
+      font-size: 13px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .header .search-box input {
+      width: 20rem;
+    }
+    
+    .sidebar {
+      display: none;
+    }
+    
+    .videos {
+      margin-left: 0;
+    }
+    
+    .channel {
+      width: 22rem;
+      height: 20rem;
+    }
+    
+    .channel #thumbnail {
+      height: 10rem;
+      width: 17rem;
+    }
+    
+    .channel .channel_content h2 {
+      font-size: 12px;
+    }
+    
+    .channel .channel_content #video_views,
+    .channel .channel_content #video_uploaded {
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .header .search-box input {
+      width: 20rem;
+    }
+    
+    .channel {
+      width: 100%;
+      height: 20rem;
+    }
+    
+    .channel #thumbnail {
+      height: 10rem;
+      width: 100%;
+    }
+    
+    .channel .channel_content {
+      margin: 10px 0;
+    }
+    
+    .channel .channel_content h2 {
+      font-size: 14px;
+    }
+    
+    .channel .channel_content #video_views,
+    .channel .channel_content #video_uploaded {
+      font-size: 14px;
+    }
+  }
+  
+
+/* ------------- Suggestions CSS ------------- */
+.suggestions {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    flex-wrap: wrap;
+}
+.suggestions button {
+    background-color: #3a3a3aef;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+.suggestions .active-btn {
+    background-color: var(--white);
+    color: var(--black);
+}
+.suggestions button:hover {
+    background-color: #6b6b6bef;
+}
+/* ------------- Sidebar CSS ------------- */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 8%;
+    font-family: 'Lato', sans-serif;
+    padding-top: 1%;
+    position: absolute;
+    top: 50px;
+}
+.sidebar .home,
+.sidebar .shorts,
+.sidebar .subs,
+.sidebar .library {
+    /* display: inline; */
+    text-align: center;
+    padding: 5% 15%;
+    border-radius: 10px;
+    width: 5rem;
+}
+.sidebar .home:hover,
+.sidebar .shorts:hover,
+.sidebar .subs:hover,
+.sidebar .library:hover {
+    background-color: #6b6b6b86;
+}
+.sidebar i {
+    font-size: 1.6rem;
+    text-align: center;
+}
+.sidebar p {
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/* ------------- Video CSS ------------- */
+.videos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-basis: 3rem; */
+    flex-wrap: wrap;
+    margin-left: 6rem;
+    font-family: 'Lato', sans-serif;
+}
+.channel {
+    flex: 1;
+    cursor: pointer;
+    width: 18.5em;
+    height: 25rem;
+}
+.channel_content {
+    display: flex;
+    flex-direction: column;
+}
+.channel #thumbnail { 
+    height: 15rem;
+    width: 20rem;
+    object-fit: contain;
+}
+.channel .channel_content #channel_img { 
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100px;
+    object-fit: contain;
+}
+.channel .channel_content h2 {
+        font-size: 15px;
+}
+.channel .channel_content #video_views,
+.channel .channel_content #video_uploaded {
+    font-size: 15px;
+    color: #b6b6b6;
+    display: inline-block;
+    margin-right: 20px;
+}
