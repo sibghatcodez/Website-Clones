@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.header {
+    background-image: linear-gradient(rgba(251, 255, 8, 0.2), rgba(255, 196, 3, 0.2)), url(img/food_BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+/* //// Side Bar \\\ */
+.sidebar {
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+    width: 22%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.sidebar.show {
+    left: 0;
+    opacity: 1;
+}
+.sidebar .close {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+}
+.sidebar .close span {
+    height: 3px;
+    width: 18px;
+    margin: 2px;
+    background-color: #000000;
+    display: block;
+    border-radius: 3px;
+}
+.sidebar .close span:first-child {
+    transform: translateY(4px) rotate(45deg);
+}
+.sidebar .close span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+}
+.sidebar button {
+    /* width: 260px; */
+    width: 100%;
+    height: 50px;
+    margin: 7px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.sidebar #sign {
+    background-color: #000;
+    color: #fff;
+}
+.sidebar #sign:hover {
+    background-color: #000000c9;
+}
+.sidebar #log:hover {
+    background-color: #969696;
+}
+.sidebar p {
+    margin: 10px 0;
+    color: #000000de;
+    font-size: 17px;
+    cursor: pointer;
+}
+/* //// Side Bar Media Query \\\\ */
+@media only screen and (max-width: 900px) {
+    .sidebar {
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 600px) {
+.sidebar {
+    width: 50%;
+}
+}
+/* ///////// --- Navigation Start--- \\\\\\\\\\ */
+
+nav {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav .logo h1 {
+    color: #000000;
+    font-size: 35px;
+}
+nav .logo h1 b {font-weight: bolder;} 
+
+nav .logo .hamburger span {
+    height: 3px;
+    width: 18px;
+    margin: 4px;
+    background-color: #000000;
+    display: block;
+    border-radius: 3px;
+}
+nav .buttons {
+    display: flex;
+}
+
+nav .buttons button {
+    width: 110px;
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 30px;
+    border: none;
+    margin: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+nav .buttons #login:hover {background-color:gray;}
+nav .buttons #signup:hover {background-color:#1b1b1b;}
+
+nav .buttons #login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .buttons #login .icon{
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+nav .buttons #signup{
+    background-color: black;
+    color: white;
+}
+
+/* ///////// --- Navigation End--- \\\\\\\\\\ */
+
+/* ///////// --- Header Body Start--- \\\\\\\\\\ */
+.header-body {
+    color: #000000;
+    margin-left: 30px;
+}
+.header-body h1 {
+    font-size: 3rem;
+}
+.header-body a,
+.header-body p {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+.header-body .input-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+.header-body .input-btns input {
+    /* width: 510px; */
+    width: 50%;
+    outline: none;
+    height: 50px;
+    border: none;
+    text-align: left;
+    font-size: 20px;
+    padding: 0 0 0 5%;
+    }
+.header-body .input-btns button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+}
+.header-body .input-btns button i {
+    padding: 0 10px;
+}
+.header-body .input-btns #ffood{
+    border-radius: 15px;
+    color: #fff;
+    background-color: #000;
+    width: 130px;
+}
+.header-body .input-btns #dnow ul {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    height: 0;
+    opacity: 0;
+    transition: .1s ease-in;
+}
+.header-body .input-btns #dnow ul li {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.header-body .input-btns #dnow ul.active {
+    height: 120px;
+    background-color: #fff;
+    opacity: 1;
+}
+.header-body .input-btns #ffood:hover{background-color:#1b1b1b;}
+
+/* //// Media Queries (header-body) \\\\ */
+@media only screen and (max-width: 600px) {
+    .header-body h1 {
+        font-size: 2.3rem;
+    }
+    .header-body .input-btns input {
+        /* width: 310px; */
+        width: 90%;
+    }
+    .header-body .input-btns button {
+        width: 190px;
+}
+}
+/* ///////// --- Header Body End--- \\\\\\\\\\ */
+
+/* ///////// --- Middle Section Start--- \\\\\\\\\\ */
+.middle {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.middle .content-box {
+    width: 400px;
+    height: 300px;
+    margin: 5% 0;
+}
+.middle .content-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.middle .content-box h1{
+    font-size: 1.5rem;
+}
+.middle .content-box p{
+    font-size: 1.1rem;
+}
+/* ///////// --- Middle Section End--- \\\\\\\\\\ */
+
+/* ///////// --- End Section Start--- \\\\\\\\\\ */
+.end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15% 2%;
+    height: 50vh;
+    width: 95vw;
+}
+.end h1 {
+    font-size: 3rem;
+}
+.end img {
+    width: 100%;
+    height: 100%;
+}
+/* ///////// --- End Section End--- \\\\\\\\\\ */
+
+
+

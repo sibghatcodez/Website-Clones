@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uber Eats US | Food Delivery</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/38e2ab382e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="close" onclick="sideBarOff()">
+            <span></span>
+            <span></span>
+        </div>
+        <button id="sign">Sign Up</button>
+        <br>
+        <button id="log">Log In</button>
+        <p>Create bussiness account</p>
+        <p>Add your restaurant</p>
+        <p>Sign up to deliver</p>
+    </div>
+    <section class="header">
+        <!-- /// Side Bar \\\ -->
+        <!-- ///////// --- Navigation Start--- \\\\\\\\\\ -->
+        <nav>
+            <div class="logo">
+                <div class="hamburger" onclick="sideBarOn()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h1>Uber <b>Eats</b></h1>
+            </div>
+
+            <div class="buttons">
+                <button id="login">
+                    <i class="fa-solid fa-user icon"></i>
+                    <p>Log In</p>
+                </button>
+                <button id="signup">
+                    <p>Sign Up</p>
+                </button>
+            </div>
+        </nav>
+        <!-- ///////// --- Navigation End--- \\\\\\\\\\ -->
+        <!-- ///////// --- Header-Body Start--- \\\\\\\\\\ -->
+        <div class="header-body">
+            <br><br><br><br><br><br><br><br><br><br>
+            <h1>Order food to your door</h1>
+            <br><br>
+            <div class="input-btns">
+                    <input type="text" placeholder="Enter delivery address">
+
+                <button id="dnow" onclick="buttonDropDown()">
+                <i class="fa-solid fa-clock"></i>
+                Deliver now
+                <i class="fa-solid fa-caret-down"></i>
+                <ul class="buttonDropDown">
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        Deliver now
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-briefcase"></i>
+                        Shedule for later
+                    </li>
+                </ul>
+            </button>
+
+                <button id="ffood">Find Food</button>
+            </div>            
+            <br>
+            <p><a href="#">Sign In</a> for your recent addresses</p>
+        </div>
+        <!-- ///////// --- Header-Body End--- \\\\\\\\\\ -->
+    </section>
+
+    <section class="middle">
+        <div class="content-box">
+            <img src="img/employee.jpg" alt="">
+            <h1>Feed your employees</h1>
+            <p style="text-decoration: underline;">Create a bussiness account</p>
+        </div>
+
+        <div class="content-box">
+            <img src="img/restaurant.jpg" alt="">
+            <h1>Your restaurant, delivered.</h1>
+            <p style="text-decoration: underline;">Add your restaurant</p>
+        </div>
+
+        <div class="content-box">
+            <img src="img/delivery.jpg" alt="">
+            <h1>Deliver with Uber Eats</h1>
+            <p style="text-decoration: underline;">Sign up to deliever</p>
+        </div>
+    </section>
+
+    <section class="end">
+        <h1>Cities near me</h1>
+        <p style="text-decoration: underline; font-size: large;">View all 500+ Cities</p>
+        <img src="img/Map.png" alt="">
+    </section>
+    <script>
+        function sideBarOn() {
+            const sidebar = document.querySelector('.sidebar');
+            // const
+            sidebar.style.left = '0';
+            sidebar.classList.add('show');
+        }
+        function sideBarOff() {
+            const sidebar = document.querySelector('.sidebar');
+            // const
+            sidebar.style.left = '-300px';
+            sidebar.classList.remove('show');
+        }
+        function buttonDropDown() {
+            const btn = document.querySelector('.buttonDropDown');
+            btn.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
